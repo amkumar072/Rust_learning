@@ -1,0 +1,3 @@
+// struct
+
+fn main() {}

@@ -11,6 +11,8 @@ fn main() {
     account.withdraw(50.05);
 
     account.check_balance();
+
+    struct_new();
 }
 
 struct BankAccount {
@@ -31,4 +33,39 @@ impl BankAccount {
             self.owner, self.balance
         );
     }
+}
+
+fn struct_new() {
+    struct Author {
+        title: String,
+        author: String,
+        pages: u32,
+        available: bool,
+    }
+
+    struct User {
+        name: String,
+        email: String,
+        active: bool,
+        sign_in_count: u64,
+    }
+
+    let mut user1 = User {
+        name: String::from("Alice"),
+        email: String::from("test@gmail.com"),
+        active: true,
+        sign_in_count: 1,
+    };
+
+    user1.email = String::from("alice@gmail.com");
+    println!("User1 name: {}", user1.name);
+
+    // tuple struct
+
+    struct Color(u8, u8, u8);
+    let black = Color(0, 0, 0);
+
+    // unit-like struct
+    struct UnitLike;
+    let unit = UnitLike;
 }
